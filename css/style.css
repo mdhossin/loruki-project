@@ -19,11 +19,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-}
-html {
     scroll-behavior: smooth;
-  }
+}
+
   
 body{
     font-family: 'Lato', sans-serif;
@@ -70,6 +68,11 @@ header .navbar{
     background-color: var(--primary-color);
     color: #fff;
     height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
 }
 header .navbar .flex{
     justify-content: space-between;
