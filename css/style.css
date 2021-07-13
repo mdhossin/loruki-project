@@ -1,0 +1,444 @@
+/* ==================== Import Google Font ==================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* ==================== Variables Css ==================== */
+
+:root{
+    --primary-color: #047aed;
+    --secondary-color: #1c3fa8;
+    --dark-color: #002240;
+    --light-color: #f4f4f4;
+    --success-color: #5cb85c;
+    --error-color: #d9534f;
+    }
+
+/* ==================== Reset Root Html Style ==================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    line-height: 1.6;
+   
+}
+
+
+/* ==================== Basic Css Style ==================== */
+
+h1,h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+code,pre{
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+/* ==================== Css Utilites/Reuseable Style ==================== */
+
+
+/* ==================== Navbar ==================== */
+
+header .navbar{
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 70px;
+}
+header .navbar .flex{
+    justify-content: space-between;
+}
+
+header .navbar .container ul{
+    display: flex;
+}
+header .navbar .container ul li a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+header .navbar .container ul li a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+
+
+/* ==================== Showcase Area ==================== */
+
+.showcase{
+    height: 400px;
+    color: #fff;
+    background-color: var(--primary-color);
+    position: relative;
+}
+.showcase::before, .showcase::after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+}
+.showcase .grid{
+    overflow: visible;
+    grid-template-columns: 55% auto;
+    gap: 30px;
+    
+}
+.showcase .showcase-text{
+    animation: sliderInFromLeft 1s ease-in;
+    -webkit-animation: sliderInFromLeft 1s ease-in;
+}
+.showcase .showcase-text h1{
+    font-size: 40px;
+}
+.showcase .showcase-text p{
+    margin: 20px 0;
+}
+
+.showcase .showcase-text .btn-outline{
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+.showcase .showcase-text .btn-outline:hover{
+    background-color: #fff;
+    color:#333;
+}
+.showcase .showcase-form{
+    justify-self: flex-end;
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    animation: sliderInFromRight 1s ease-in;
+    -webkit-animation: sliderInFromRight 1s ease-in;
+}
+
+.showcase .showcase-form .form-control{
+    margin: 30px 0;
+}
+.showcase .showcase-form .form-control input:focus{
+    outline: none;
+}
+.showcase .showcase-form .form-control input[type="text"],
+.showcase .showcase-form .form-control input[type="email"]{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+/* ==================== Stats Area ==================== */
+.stats{
+    padding-top: 100px;
+    animation: sliderInFromBottom 1s ease-in;
+    -webkit-animation: sliderInFromBottom 1s ease-in;
+}
+.stats .stats-heading{
+    max-width: 500px;
+    margin: auto;
+}
+.stats .grid h3{
+    font-size: 35px;
+}
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+/* ==================== Cli Area ==================== */
+
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,fr);
+
+}
+
+.cli .grid img{
+    grid-column: 1/3;
+    grid-row: span 2;
+}
+
+/* ==================== Cloud Area ==================== */
+
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+
+/* ==================== languages Area ==================== */
+.languages .flex{
+    flex-wrap: wrap;
+}
+.languages .card{
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+}
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.languages .card:hover{
+    transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+}
+
+/* ==================== Footer Area ==================== */
+
+.footer .social a{
+    margin: 0 10px;
+}
+
+
+/* ==================== Features Head Area ==================== */
+
+.features-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+
+/* ==================== Features Sub Head Area ==================== */
+
+.features-sub-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+/* ==================== Features main Area ==================== */
+
+.features-main .card > i{
+    margin-right: 20px;
+}
+.features-main{
+    grid-template-rows: repeat(3,1fr);
+}
+.features-main .grid{
+    padding: 30px;
+}
+.features-main .card-1{
+    grid-column: 1/-1;
+}
+.features-main .card-2{
+    grid-column: span 2;
+}
+
+/* ==================== Docs Area ==================== */
+
+.docs-head img{
+    width: 200px;
+    justify-self: flex-end;
+}
+
+/* ==================== Docs Main Area ==================== */
+
+.docs-main h3{
+    margin: 20px 0;
+ 
+}
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.docs-main a:hover{
+    font-weight: bold;
+}
+
+
+/* ==================== Animation ==================== */
+
+@keyframes sliderInFromLeft {
+    0%{
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+@keyframes sliderInFromRight{
+    0%{
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+}
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+@keyframes sliderInFromTop {
+    0%{
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+}
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+@keyframes sliderInFromBottom {
+    0%{
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
+}
+    100%{
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+
+/* ==================== Media Queries ==================== */
+
+/* Tablets and under */
+
+@media screen and (max-width:768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .footer .grid,
+    .features-head .grid,
+    .features-sub-head .grid,
+    .docs-head .grid,
+    .docs-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .showcase{
+        height: auto;
+    }
+    .showcase .showcase-text{
+        text-align: center;
+        margin-top: 40px;
+        animation: sliderInFromTop 1s ease-in;
+        -webkit-animation: sliderInFromTop 1s ease-in;
+}
+    .showcase .showcase-form{
+        justify-self: center;
+        margin: auto;
+        animation: sliderInFromBottom 1s ease-in;
+        -webkit-animation: sliderInFromBottom 1s ease-in;
+}
+    .cli .grid img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .features-head,
+    .features-sub-head,
+    .docs-head{
+        text-align: center;
+    }
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
+    }
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2){
+        grid-column: 1;
+    }
+    
+}
+/* Moblie */
+
+@media screen and (max-width:500px){
+    header .navbar{
+        height: 100px;
+    }
+    header .navbar .flex{
+        flex-direction: column;
+    }
+    header .navbar .container ul{
+        background-color: rgba(0, 0, 0, .1);
+        padding: 8px 12px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+}
